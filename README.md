@@ -209,11 +209,7 @@ in the [examples](examples) folder.
 
 ## Running the Web UI as a Service
 
-On Ubuntu you can launch the web interface automatically via
-[systemd](https://www.freedesktop.org/wiki/Software/systemd/).  Create a file
-named `detikzify-webui.service` in `/etc/systemd/system/` with the following
-contents (adjust the Python path and user to match your setup):
-
+On Ubuntu you can launch the web interface automatically via [systemd](https://www.freedesktop.org/wiki/Software/systemd/).  Create a file named `detikzify-webui.service` in `/etc/systemd/system/` with the following contents (adjust the Python path and user to match your setup):
 ```ini
 [Unit]
 Description=DeTi*k*Zify Web UI
@@ -230,11 +226,13 @@ WantedBy=multi-user.target
 ```
 
 Then reload the service files and enable the new service:
-
-```sh
+```bash
+sudo cp detikzify-webui.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable detikzify-webui.service
 sudo systemctl start detikzify-webui.service
+sudo systemctl status detikzify-webui.service
+```stemctl start detikzify-webui.service
 ```
 
 You also need nginx proxy
