@@ -232,7 +232,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable detikzify-webui.service
 sudo systemctl start detikzify-webui.service
 sudo systemctl status detikzify-webui.service
-```stemctl start detikzify-webui.service
 ```
 
 You also need nginx proxy
